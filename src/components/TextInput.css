@@ -15,7 +15,11 @@
 
       label ~ input,
       label ~ textarea {
-        @apply pt-5;
+        @apply pt-5 m-0;
+        font-family: inherit;
+        font-size: 100%;
+        line-height: inherit;
+        color: inherit;
       }
     }
 

@@ -6,15 +6,14 @@ import WindiCSS from 'vite-plugin-windicss'
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [
-    WindiCSS({
-      preflight: false,
-    }),
+    WindiCSS(),
   ],
   build: {
+    minify: true,
     lib: {
-      entry: path.resolve(__dirname, 'main.js'),
-      name: 'vuwi-theme',
-      fileName: (format) => `vuwi-theme.${format}.js`,
+      entry: path.resolve(__dirname, 'main.ts'),
+      formats: ['es'],
+      fileName: `vuwi`,
     }
   }
 })

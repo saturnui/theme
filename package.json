@@ -1,10 +1,14 @@
 {
   "name": "@vuwi/theme",
   "version": "0.0.0",
+  "files": [
+    "dist"
+  ],
+  "license": "MIT",
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
-    "preview": "vite preview"
+    "build": "vite build && rm dist/vuwi.es.js && mv dist/style.css dist/vuwi.css",
+    "build:local": "rm -f vuwi-theme-$npm_package_version.tgz && pnpm build && npm pack && mkdir -p ~/local_modules && rm -rf ~/local_modules/vuwi-theme-$npm_package_version.tgz && cp vuwi-theme-$npm_package_version.tgz ~/local_modules/vuwi-theme.tgz"
   },
   "devDependencies": {
     "@types/node": "^17.0.9",
