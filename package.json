@@ -1,17 +1,27 @@
 {
-  "name": "@vuwi/theme",
+  "name": "@vuwi/plugin",
   "version": "0.0.0",
   "files": [
     "dist"
   ],
+  "exports": {
+    "./vuwi.css": "./dist/vuwi.css",
+    "./safelist": "./dist/safelist.js",
+    "./dist/tailwindcss": "./dist/tailwindcss.js",
+    "./tailwindcss": "./dist/tailwindcss.js",
+    "./dist/windicss": "./dist/windicss.js",
+    "./windicss": "./dist/windicss.js"
+  },
   "license": "MIT",
   "scripts": {
     "dev": "vite",
-    "build": "vite build && rm dist/vuwi.es.js && mv dist/style.css dist/vuwi.css",
-    "build:local": "rm -f vuwi-theme-$npm_package_version.tgz && pnpm build && npm pack && mkdir -p ~/local_modules && rm -rf ~/local_modules/vuwi-theme-$npm_package_version.tgz && cp vuwi-theme-$npm_package_version.tgz ~/local_modules/vuwi-theme.tgz"
+    "build": "vite build",
+    "build:local": "rm -f vuwi-plugin-$npm_package_version.tgz && pnpm build && npm pack && mkdir -p ~/local_modules && rm -rf ~/local_modules/vuwi-plugin-$npm_package_version.tgz && cp vuwi-plugin-$npm_package_version.tgz ~/local_modules/vuwi-plugin.tgz"
   },
   "devDependencies": {
     "@types/node": "^17.0.9",
+    "postcss": "^8.4.5",
+    "postcss-js": "^4.0.0",
     "vite": "^2.7.2",
     "vite-plugin-windicss": "^1.6.3",
     "windicss": "^3.4.3"
