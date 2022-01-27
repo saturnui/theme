@@ -58,7 +58,7 @@
 
     /* Link */
     &-link {
-      @apply text-primary dark:text-primary-light hover:cursor-pointer hover:underline rounded;
+      @apply hover:cursor-pointer hover:underline rounded;
     }
 
     /* Button Group */
