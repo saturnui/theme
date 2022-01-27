@@ -10,7 +10,7 @@
 
       input,
       textarea {
-        @apply bg-transparent focus:outline-none h-full w-full resize-none py-1;
+        @apply border-none bg-transparent focus:outline-none h-full w-full resize-none py-1 px-0 focus:ring-0;
       }
 
       label ~ input,
@@ -21,22 +21,22 @@
         line-height: inherit;
         color: inherit;
       }
-    }
 
-    &-textinput-error {
-      @apply !border-red-600 
+      input[disabled] {
+        @apply opacity-20 dark:opacity-30;
+
+        label {
+          @apply text-opacity-40 dark:text-opacity-40 -mb-1;
+        }
+      }
+
+      &.has-error {
+        @apply !border-red-600 
       focus-within:!border-red-600 focus-within:!border-opacity-100;
 
-      label {
-        @apply !text-red-600 dark:!text-red-400 !text-opacity-100 dark:!text-opacity-100;
-      }
-    }
-
-    &-textinput-disabled {
-      @apply opacity-20 dark:opacity-30;
-
-      label {
-        @apply text-opacity-40 dark:text-opacity-40 -mb-1;
+        label {
+          @apply !text-red-600 dark:!text-red-400 !text-opacity-100 dark:!text-opacity-100;
+        }
       }
     }
   }
