@@ -2,18 +2,18 @@
   .wi {
     &-dialog {
       @apply rounded w-full;
-    }
 
-    &-dialog-titlebar {
-      @apply flex items-center p-2 pl-4 gap-2;
-    }
+      [name='titlebar'] {
+        @apply flex items-center p-2 pl-4 gap-2;
+      }
 
-    &-dialog-close-icon {
-      @apply h-6 w-6;
-    }
+      [name='close-icon'] {
+        @apply h-6 w-6;
+      }
 
-    &-dialog-actions {
-      @apply flex items-center justify-end p-2 gap-2;
+      [name='actions'] {
+        @apply flex items-center justify-end p-2 gap-2;
+      }
     }
   }
 }

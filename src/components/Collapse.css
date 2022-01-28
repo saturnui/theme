@@ -1,31 +1,21 @@
 @layer components {
   .wi {
-    &-collapse ~ &-collapse {
-      margin-top: 1px;
-    }
-
-    &-collapse-border {
-      .collapse-header {
-        @apply bg-white dark:bg-gray-800 border dark:border-gray-700;
+    &-collapse {
+      .down {
+        @apply absolute bottom-0 w-full;
       }
-      margin-top: -1px !important;
-    }
 
-    &-collapse-content {
-      @apply border dark:border-none;
-      margin-top: -1px;
-    }
-
-    &-collapse-enter-active,
-    &-collapse-leave-active {
-      will-change: height;
-      transition: height 300ms ease;
-      overflow: hidden;
-    }
-
-    &-collapse-enter-from,
-    &-collapse-leave-to {
-      height: 0 !important;
+      &-enter-active,
+      &-leave-active {
+        will-change: height;
+        transition: height 300ms ease;
+        overflow: hidden;
+      }
+  
+      &-enter-from,
+      &-leave-to {
+        height: 0 !important;
+      }
     }
   }
 }

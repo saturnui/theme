@@ -8,20 +8,20 @@
       &::-webkit-scrollbar {
         @apply hidden;
       }
+      &[direction="vertical"], &.direction-vertical {
+        @apply flex-col overflow-x-hidden overflow-y-scroll;
+        scroll-snap-type: y mandatory;
+      }
+      &-item, &.carousel-item {
+        @apply flex flex-none box-content;
+        scroll-snap-align: start;
+      }
     }
-    &-carousel-vertical {
-      @apply flex-col overflow-x-hidden overflow-y-scroll;
-      scroll-snap-type: y mandatory;
-    }
-    &-carousel-item {
-      @apply flex flex-none box-content;
-      scroll-snap-align: start;
-    }
-    &-carousel-center .carousel-item {
+    /* &-center &-item {
       scroll-snap-align: center;
     }
-    &-carousel-end .carousel-item {
+    &-end &-item {
       scroll-snap-align: end;
-    }
+    } */
   }
 }
