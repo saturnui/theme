@@ -214,18 +214,12 @@ module.exports = {
     "borderColor": "rgba(15,23,42,var(--tw-border-opacity)) !important"
   },
   ".wi-link": {
-    "borderRadius": ".25rem",
-    "--tw-text-opacity": "1",
-    "color": "rgba(24,115,232,var(--tw-text-opacity))"
+    "borderRadius": ".25rem"
   },
   ".wi-link:hover": {
     "cursor": "pointer",
     "WebkitTextDecorationLine": "underline",
     "textDecorationLine": "underline"
-  },
-  ".dark .wi-link": {
-    "--tw-text-opacity": "1",
-    "color": "rgba(6,148,255,var(--tw-text-opacity))"
   },
   ".wi-btn-group .wi-btn": {
     "borderRadius": "0 !important"
@@ -471,6 +465,10 @@ module.exports = {
     "gridGap": ".5rem",
     "gap": ".5rem"
   },
+  ".wi-drawer-responsive": {
+    "maxWidth": "4rem",
+    "minWidth": "4rem"
+  },
   ".wi-drawer": {
     "maxWidth": "18.75rem",
     "minWidth": "18.75rem",
@@ -478,41 +476,156 @@ module.exports = {
     "overflowY": "auto",
     "width": "100%"
   },
+  ".wi-drawer-autohide": {
+    "display": "none"
+  },
+  "@media (min-width: 1024px)": [
+    {
+      ".wi-drawer-autohide": {
+        "display": "block"
+      }
+    },
+    {
+      ".wi-drawer-left": {
+        "marginLeft": "18.75rem"
+      },
+      ".wi-drawer-responsive~.wi-drawer-left": {
+        "marginLeft": "4rem"
+      }
+    },
+    {
+      ".wi-drawer-right": {
+        "marginRight": "18.75rem"
+      }
+    },
+    {
+      ".wi-formsection": {
+        "gridTemplateColumns": "repeat(3,minmax(0,1fr))"
+      }
+    },
+    {
+      ".wi-col-3-1": {
+        "gridTemplateColumns": "repeat(3,minmax(0,1fr))"
+      }
+    },
+    {
+      ".wi-col-3-2-1": {
+        "gridTemplateColumns": "repeat(3,minmax(0,1fr))"
+      }
+    }
+  ],
+  ".wi-drawer-autohide-xl": {
+    "display": "none"
+  },
+  "@media (min-width: 1280px)": [
+    {
+      ".wi-drawer-autohide-xl": {
+        "display": "block"
+      },
+      ".wi-drawer-responsive": {
+        "maxWidth": "18.75rem",
+        "minWidth": "18.75rem"
+      }
+    },
+    {
+      ".wi-drawer-responsive~.wi-drawer-left": {
+        "marginLeft": "18.75rem"
+      }
+    },
+    {
+      ".wi-drawer-right-xl": {
+        "marginRight": "18.75rem"
+      }
+    },
+    {
+      ".wi-drawer-right~.wi-drawer-responsive": {
+        "maxWidth": "18.75rem",
+        "minWidth": "18.75rem"
+      }
+    }
+  ],
   ".wi-drawer-mini": {
     "maxWidth": "4rem",
     "minWidth": "4rem"
   },
-  ".wi-dropdown": {
-    "borderRadius": ".25rem",
-    "display": [
-      "-webkit-box",
-      "-ms-flexbox",
-      "-webkit-flex",
-      "flex"
-    ],
-    "WebkitBoxAlign": "center",
-    "msFlexAlign": "center",
-    "WebkitAlignItems": "center",
-    "alignItems": "center",
-    "paddingRight": ".5rem",
-    "paddingTop": ".25rem",
-    "paddingBottom": ".25rem",
-    "position": "relative",
-    "gridGap": ".5rem",
-    "gap": ".5rem"
+  ".wi-drawer-mini~.wi-drawer-left": {
+    "marginLeft": "4rem"
   },
-  ".wi-dropdown select": {
-    "backgroundColor": "transparent",
-    "padding": ".25rem .5rem",
-    "width": "100%"
+  ".wi-drawer-right~.wi-drawer-responsive": {
+    "maxWidth": "4rem",
+    "minWidth": "4rem"
   },
-  ".wi-dropdown select:focus": {
-    "outline": "2px solid transparent",
-    "outlineOffset": "2px"
+  ".wi-drawer-right~.wi-drawer-mini": {
+    "marginRight": "4rem"
   },
-  ".wi-dropdown select.label": {
-    "paddingTop": "1rem"
+  "@media (min-width: 768px)": [
+    {
+      ".wi-formsection": {
+        "display": [
+          "-ms-grid",
+          "grid"
+        ],
+        "gridGap": "1.5rem",
+        "gap": "1.5rem"
+      }
+    },
+    {
+      ".wi-col-3-2-1": {
+        "gridTemplateColumns": "repeat(2,minmax(0,1fr))"
+      }
+    },
+    {
+      ".wi-col-2-1": {
+        "gridTemplateColumns": "repeat(2,minmax(0,1fr))"
+      }
+    }
+  ],
+  ".wi-formsection-title": {
+    "fontWeight": "500",
+    "fontSize": "1.25rem",
+    "lineHeight": [
+      "1.75rem",
+      "1.5rem"
+    ]
   },
+  ".wi-formsection-desc": {
+    "marginTop": ".5rem",
+    "--tw-text-opacity": "1",
+    "color": "rgba(31,41,55,var(--tw-text-opacity))"
+  },
+  ".dark .wi-formsection-desc": {
+    "--tw-text-opacity": "1",
+    "color": "rgba(156,163,175,var(--tw-text-opacity))"
+  },
+  ".wi-formsection-content>:not([hidden])~:not([hidden])": {
+    "--tw-space-y-reverse": "0",
+    "marginTop": "calc(1.5rem * calc(1 - var(--tw-space-y-reverse)))",
+    "marginBottom": "calc(1.5rem * var(--tw-space-y-reverse))"
+  },
+  ".wi-formsection-content": {
+    "--tw-bg-opacity": "1",
+    "backgroundColor": "rgba(255,255,255,var(--tw-bg-opacity))",
+    "padding": "1.25rem 1rem"
+  },
+  ".dark .wi-formsection-content": {
+    "--tw-bg-opacity": "1",
+    "backgroundColor": "rgba(30,41,59,var(--tw-bg-opacity))"
+  },
+  "@media (min-width: 640px)": [
+    {
+      ".wi-formsection-content": {
+        "padding": "1.5rem"
+      }
+    },
+    {
+      ".wi-overlay-center": {
+        "WebkitBoxAlign": "center",
+        "msFlexAlign": "center",
+        "WebkitAlignItems": "center",
+        "alignItems": "center"
+      }
+    }
+  ],
   ".wi-line": {
     "display": [
       "-webkit-box",
@@ -610,10 +723,6 @@ module.exports = {
       "-webkit-flex",
       "flex"
     ],
-    "WebkitBoxAlign": "center",
-    "msFlexAlign": "center",
-    "WebkitAlignItems": "center",
-    "alignItems": "center",
     "WebkitBoxPack": "center",
     "msFlexPack": "center",
     "WebkitJustifyContent": "center",
@@ -750,20 +859,22 @@ module.exports = {
     "display": "none"
   },
   ".wi-pagination div[name=more][active=true]": {
-    "--tw-border-opacity": [
-      "1",
-      ".2"
-    ],
-    "borderColor": "rgba(71,85,105,var(--tw-border-opacity))",
+    "--tw-bg-opacity": "1",
+    "backgroundColor": "rgba(24,115,232,var(--tw-bg-opacity))",
     "borderRadius": ".25rem",
-    "borderWidth": "2px"
-  },
-  ".dark .wi-pagination div[name=more][active=true]": {
-    "--tw-border-opacity": [
-      "1",
-      ".2"
+    "display": [
+      "-webkit-box",
+      "-ms-flexbox",
+      "-webkit-flex",
+      "flex"
     ],
-    "borderColor": "rgba(241,245,249,var(--tw-border-opacity))"
+    "WebkitBoxAlign": "center",
+    "msFlexAlign": "center",
+    "WebkitAlignItems": "center",
+    "alignItems": "center",
+    "height": "2rem",
+    "--tw-text-opacity": "1",
+    "color": "rgba(255,255,255,var(--tw-text-opacity))"
   },
   ".wi-pagination div[name=more][active=true] [name=page]": {
     "display": "block",
@@ -1586,15 +1697,22 @@ module.exports = {
   },
   ".wi-textinput input,.wi-textinput textarea": {
     "backgroundColor": "transparent",
+    "borderStyle": "none",
     "height": "100%",
     "paddingTop": ".25rem",
     "paddingBottom": ".25rem",
+    "paddingLeft": "0",
+    "paddingRight": "0",
     "resize": "none",
     "width": "100%"
   },
   ".wi-textinput input:focus,.wi-textinput textarea:focus": {
     "outline": "2px solid transparent",
-    "outlineOffset": "2px"
+    "outlineOffset": "2px",
+    "--tw-ring-offset-shadow": "var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color)",
+    "--tw-ring-shadow": "var(--tw-ring-inset) 0 0 0 calc(0px + var(--tw-ring-offset-width)) var(--tw-ring-color)",
+    "WebkitBoxShadow": "var(--tw-ring-offset-shadow),var(--tw-ring-shadow),var(--tw-shadow, 0 0 #0000)",
+    "boxShadow": "var(--tw-ring-offset-shadow),var(--tw-ring-shadow),var(--tw-shadow, 0 0 #0000)"
   },
   ".wi-textinput label~input,.wi-textinput label~textarea": {
     "margin": "0",
@@ -1604,34 +1722,34 @@ module.exports = {
     "lineHeight": "inherit",
     "color": "inherit"
   },
-  ".wi-textinput-error": {
-    "--tw-border-opacity": "1 !important",
-    "borderColor": "rgba(220,38,38,var(--tw-border-opacity)) !important"
-  },
-  ".wi-textinput-error:focus-within": {
-    "--tw-border-opacity": "1 !important",
-    "borderColor": "rgba(220,38,38,var(--tw-border-opacity)) !important"
-  },
-  ".wi-textinput-error label": {
-    "--tw-text-opacity": "1 !important",
-    "color": "rgba(220,38,38,var(--tw-text-opacity)) !important"
-  },
-  ".dark .wi-textinput-error label": {
-    "--tw-text-opacity": "1 !important",
-    "color": "rgba(248,113,113,var(--tw-text-opacity)) !important"
-  },
-  ".wi-textinput-disabled": {
+  ".wi-textinput input[disabled]": {
     "opacity": "0.2"
   },
-  ".dark .wi-textinput-disabled": {
+  ".dark .wi-textinput input[disabled]": {
     "opacity": "0.3"
   },
-  ".wi-textinput-disabled label": {
+  ".wi-textinput input[disabled] label": {
     "marginBottom": "-.25rem",
     "--tw-text-opacity": ".4"
   },
-  ".dark .wi-textinput-disabled label": {
+  ".dark .wi-textinput input[disabled] label": {
     "--tw-text-opacity": ".4"
+  },
+  ".wi-textinput.has-error": {
+    "--tw-border-opacity": "1 !important",
+    "borderColor": "rgba(220,38,38,var(--tw-border-opacity)) !important"
+  },
+  ".wi-textinput.has-error:focus-within": {
+    "--tw-border-opacity": "1 !important",
+    "borderColor": "rgba(220,38,38,var(--tw-border-opacity)) !important"
+  },
+  ".wi-textinput.has-error label": {
+    "--tw-text-opacity": "1 !important",
+    "color": "rgba(220,38,38,var(--tw-text-opacity)) !important"
+  },
+  ".dark .wi-textinput.has-error label": {
+    "--tw-text-opacity": "1 !important",
+    "color": "rgba(248,113,113,var(--tw-text-opacity)) !important"
   },
   ".wi-tooltip-target": {
     "display": "inline-block"
@@ -2168,6 +2286,47 @@ module.exports = {
     "backgroundImage": "linear-gradient(-45deg,rgba(255,255,255,.2) 25%,transparent 25%,transparent 50%,rgba(255,255,255,.2) 50%,rgba(255,255,255,.2) 75%,transparent 75%,transparent)",
     "backgroundSize": "50px 50px"
   },
+  ".wi-col-3": {
+    "display": [
+      "-ms-grid",
+      "grid"
+    ],
+    "gridTemplateColumns": "repeat(3,minmax(0,1fr))"
+  },
+  ".wi-col-3-1": {
+    "display": [
+      "-ms-grid",
+      "grid"
+    ],
+    "gridTemplateColumns": "repeat(1,minmax(0,1fr))"
+  },
+  ".wi-col-3-2-1": {
+    "display": [
+      "-ms-grid",
+      "grid"
+    ],
+    "gridTemplateColumns": "repeat(1,minmax(0,1fr))"
+  },
+  ".wi-col-2": {
+    "display": [
+      "-ms-grid",
+      "grid"
+    ],
+    "gridTemplateColumns": "repeat(2,minmax(0,1fr))"
+  },
+  ".wi-col-2-1": {
+    "display": [
+      "-ms-grid",
+      "grid"
+    ],
+    "gridTemplateColumns": "repeat(1,minmax(0,1fr))"
+  },
+  ".wi-col-1": {
+    "display": [
+      "-ms-grid",
+      "grid"
+    ]
+  },
   ".wi-tl": {
     "left": "0",
     "top": "0"
@@ -2224,6 +2383,18 @@ module.exports = {
     "msFlexPack": "center",
     "WebkitJustifyContent": "center",
     "justifyContent": "center"
+  },
+  ".wi-row": {
+    "display": [
+      "-webkit-box",
+      "-ms-flexbox",
+      "-webkit-flex",
+      "flex"
+    ],
+    "WebkitBoxAlign": "center",
+    "msFlexAlign": "center",
+    "WebkitAlignItems": "center",
+    "alignItems": "center"
   },
   ".animate-spin.wi-fastest": {
     "animation": "wi-rotate .25s linear infinite"

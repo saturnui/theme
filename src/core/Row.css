@@ -1,0 +1,7 @@
+@layer components {
+  .wi {
+    &-row {
+      @apply flex items-center;
+    }
+  }
+}
