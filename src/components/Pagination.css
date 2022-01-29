@@ -19,7 +19,7 @@
         }
 
         &[active='true'] {
-          @apply border-2 border-dark-600 border-opacity-20 dark:border-dark-100 dark:border-opacity-20 rounded;
+          @apply flex justify-center h-8 bg-primary text-white rounded;
 
           [name='page'] {
             @apply block text-sm leading-tight -mb-2;
