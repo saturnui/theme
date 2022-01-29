@@ -2,135 +2,136 @@
   .wi {
     &-overlay {
       @apply fixed top-0 left-0 w-full h-full overflow-y-auto;
-    }
-    &-overlay-top {
-      @apply fixed top-0 left-0 w-full;
-    }
-    &-overlay-left {
-      @apply fixed top-0 left-0 h-full;
-    }
-    &-overlay-right {
-      @apply fixed top-0 right-0 h-full;
-    }
-    &-overlay-bottom {
-      @apply fixed bottom-0 left-0 w-full;
-    }
-    &-overlay-center {
-      @apply fixed top-0 left-0 w-full h-full flex sm:items-center justify-center overflow-auto pointer-events-none;
-    }
-    &-overlay-top > *,
-    &-overlay-left > *,
-    &-overlay-right > *,
-    &-overlay-bottom > *,
-    &-overlay-center > * {
-      @apply pointer-events-auto;
-    }
 
-    /* Use this class to contain overlay inside parent */
-    &-overlay-absolute > &-overlay,
-    &-overlay-absolute > &-overlay-top,
-    &-overlay-absolute > &-overlay-left,
-    &-overlay-absolute > &-overlay-right,
-    &-overlay-absolute > &-overlay-bottom,
-    &-overlay-absolute > &-overlay-center {
-      @apply absolute;
-    }
+      &-top {
+        @apply fixed top-0 left-0 w-full;
+      }
+      &-left {
+        @apply fixed top-0 left-0 h-full;
+      }
+      &-right {
+        @apply fixed top-0 right-0 h-full;
+      }
+      &-bottom {
+        @apply fixed bottom-0 left-0 w-full;
+      }
+      &-center {
+        @apply fixed top-0 left-0 w-full h-full flex sm:items-center justify-center overflow-auto pointer-events-none;
+      }
+      &-top > *,
+      &-left > *,
+      &-right > *,
+      &-bottom > *,
+      &-center > * {
+        @apply pointer-events-auto;
+      }
 
-    /* Use this class to share overlay with content */
-    &-overlay-relative > &-overlay,
-    &-overlay-relative > &-overlay-top,
-    &-overlay-relative > &-overlay-left,
-    &-overlay-relative > &-overlay-right,
-    &-overlay-relative > &-overlay-bottom,
-    &-overlay-relative > &-overlay-center {
-      @apply relative;
-    }
+      /* Use this class to contain overlay inside parent */
+      &-absolute > &,
+      &-absolute > &-top,
+      &-absolute > &-left,
+      &-absolute > &-right,
+      &-absolute > &-bottom,
+      &-absolute > &-center {
+        @apply absolute;
+      }
 
-    /* Default opacity */
-    &-overlay-shade > &-overlay {
-      @apply bg-dark-900 bg-opacity-30 dark:bg-opacity-60;
-    }
+      /* Use this class to share overlay with content */
+      &-relative > &,
+      &-relative > &-top,
+      &-relative > &-left,
+      &-relative > &-right,
+      &-relative > &-bottom,
+      &-relative > &-center {
+        @apply relative;
+      }
 
-    /* Overlay */
-    &-overlay-enter-active,
-    &-overlay-leave-active {
-      transition: opacity 0.3s ease;
-    }
+      /* Default opacity */
+      &-shade > & {
+        @apply bg-dark-900 bg-opacity-30 dark:bg-opacity-60;
+      }
 
-    &-overlay-enter-from,
-    &-overlay-leave-to {
-      opacity: 0;
-    }
+      /* Overlay */
+      &-enter-active,
+      &-leave-active {
+        transition: opacity 0.3s ease;
+      }
 
-    /* Overlay Center */
-    &-overlay-center-enter-active {
-      transition: opacity 0.2s ease-out, transform 0.2s ease-out;
-    }
+      &-enter-from,
+      &-leave-to {
+        opacity: 0;
+      }
 
-    &-overlay-center-leave-active {
-      transition: opacity 0.2s ease-out, transform 0.2s ease-in;
-    }
+      /* Overlay Center */
+      &-center-enter-active {
+        transition: opacity 0.2s ease-out, transform 0.2s ease-out;
+      }
 
-    &-overlay-center-enter-from,
-    &-overlay-center-leave-to {
-      transform: translateY(20px);
-      opacity: 0;
-    }
+      &-center-leave-active {
+        transition: opacity 0.2s ease-out, transform 0.2s ease-in;
+      }
 
-    /* Overlay Left */
-    &-overlay-left-enter-active {
-      transition: transform 0.2s ease-out;
-    }
+      &-center-enter-from,
+      &-center-leave-to {
+        transform: translateY(20px);
+        opacity: 0;
+      }
 
-    &-overlay-left-leave-active {
-      transition: transform 0.2s ease-in;
-    }
+      /* Overlay Left */
+      &-left-enter-active {
+        transition: transform 0.2s ease-out;
+      }
 
-    &-overlay-left-enter-from,
-    &-overlay-left-leave-to {
-      transform: translateX(-100%);
-    }
+      &-left-leave-active {
+        transition: transform 0.2s ease-in;
+      }
 
-    /* Overlay Right */
-    &-overlay-right-enter-active {
-      transition: transform 0.2s ease-out;
-    }
+      &-left-enter-from,
+      &-left-leave-to {
+        transform: translateX(-100%);
+      }
 
-    &-overlay-right-leave-active {
-      transition: transform 0.2s ease-in;
-    }
+      /* Overlay Right */
+      &-right-enter-active {
+        transition: transform 0.2s ease-out;
+      }
 
-    &-overlay-right-enter-from,
-    &-overlay-right-leave-to {
-      transform: translateX(100%);
-    }
+      &-right-leave-active {
+        transition: transform 0.2s ease-in;
+      }
 
-    /* Overlay Bottom */
-    &-overlay-bottom-enter-active {
-      transition: transform 0.2s ease-out;
-    }
+      &-right-enter-from,
+      &-right-leave-to {
+        transform: translateX(100%);
+      }
 
-    &-overlay-bottom-leave-active {
-      transition: transform 0.2s ease-in;
-    }
+      /* Overlay Bottom */
+      &-bottom-enter-active {
+        transition: transform 0.2s ease-out;
+      }
 
-    &-overlay-bottom-enter-from,
-    &-overlay-bottom-leave-to {
-      transform: translateY(100%);
-    }
+      &-bottom-leave-active {
+        transition: transform 0.2s ease-in;
+      }
 
-    /* Overlay Top */
-    &-overlay-top-enter-active {
-      transition: transform 0.2s ease-out;
-    }
+      &-bottom-enter-from,
+      &-bottom-leave-to {
+        transform: translateY(100%);
+      }
 
-    &-overlay-top-leave-active {
-      transition: transform 0.2s ease-in;
-    }
+      /* Overlay Top */
+      &-top-enter-active {
+        transition: transform 0.2s ease-out;
+      }
 
-    &-overlay-top-enter-from,
-    &-overlay-top-leave-to {
-      transform: translateY(-100%);
+      &-top-leave-active {
+        transition: transform 0.2s ease-in;
+      }
+
+      &-top-enter-from,
+      &-top-leave-to {
+        transform: translateY(-100%);
+      }
     }
   }
 }

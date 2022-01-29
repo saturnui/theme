@@ -19,7 +19,7 @@
         }
 
         &[active='true'] {
-          @apply flex items-center h-8 bg-primary text-white rounded;
+          @apply flex justify-center h-8 bg-primary text-white rounded;
 
           [name='page'] {
             @apply block text-sm leading-tight -mb-2;

@@ -12,7 +12,7 @@
         @apply flex-col overflow-x-hidden overflow-y-scroll;
         scroll-snap-type: y mandatory;
       }
-      &-item, &.carousel-item {
+      &-item {
         @apply flex flex-none box-content;
         scroll-snap-align: start;
       }
