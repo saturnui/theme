@@ -1,5 +1,5 @@
 @layer components {
-  .wi {
+  .sa {
     &-collapse {
       .down {
         @apply absolute bottom-0 w-full;

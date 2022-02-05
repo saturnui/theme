@@ -55,7 +55,7 @@ export default () => {
 
       // Generate safelist
       const s = JSON.stringify(js, null, '  ')
-      const matches = s.match(/wi-[\w-]+/gi)
+      const matches = s.match(/sa-[\w-]+/gi)
       const uniq = [...new Set(matches)]
       fs.writeFileSync(fp('safelist.js'), `module.exports = ${JSON.stringify(uniq, null, '  ')}`)
       println('safelist.js')

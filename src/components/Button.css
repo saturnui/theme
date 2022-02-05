@@ -1,5 +1,5 @@
 @layer components {
-  .wi {
+  .sa {
     /* Default */
     &-btn {
       @apply inline-flex items-center justify-center cursor-pointer
@@ -18,25 +18,25 @@
       }
 
       /* Sizes */
-      &.wi-xs, &[size='xs'] {
+      &.sa-xs, &[size='xs'] {
         @apply px-2 leading-0 text-xs min-h-5;
         &[icon] {
           @apply min-w-5;
         }
       }
-      &.wi-sm, &[size='sm'] {
+      &.sa-sm, &[size='sm'] {
         @apply px-3 leading-0 text-sm min-h-8;
         &[icon] {
           @apply min-w-8;
         }
       }
-      &.wi-lg, &[size='lg'] {
+      &.sa-lg, &[size='lg'] {
         @apply px-6 min-h-12 text-lg;
         &[icon] {
           @apply min-w-12;
         }
       }
-      &.wi-xl, &[size='xl'] {
+      &.sa-xl, &[size='xl'] {
         @apply px-8 min-h-14 text-xl;
         &[icon] {
           @apply min-w-14;
