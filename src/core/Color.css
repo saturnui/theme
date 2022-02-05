@@ -44,7 +44,7 @@
     }
   }
 
-  .wi {
+  .sa {
     &-danger {
       @apply bg-red-500 text-white;
     }

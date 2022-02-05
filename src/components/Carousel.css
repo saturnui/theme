@@ -1,5 +1,5 @@
 @layer components {
-  .wi {
+  .sa {
     &-carousel {
       @apply flex overflow-x-scroll;
       scroll-snap-type: x mandatory;

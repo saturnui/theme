@@ -1,6 +1,6 @@
 /* https://www.cssportal.com/style-input-range/ */
 @layer components {
-  .wi-slider-sm {
+  .sa-slider-sm {
     @apply relative w-full h-3;
 
     input[type='range'] {
@@ -29,7 +29,7 @@
     }
   }
 
-  .wi-slider {
+  .sa-slider {
     @apply relative w-full h-5;
 
     input[type='range'] {
@@ -58,7 +58,7 @@
     }
   }
 
-  .wi-slider-lg {
+  .sa-slider-lg {
     @apply relative h-8;
 
     input[type='range'] {
@@ -87,7 +87,7 @@
     }
   }
 
-  .wi-slider-xl {
+  .sa-slider-xl {
     @apply relative h-10;
 
     input[type='range'] {

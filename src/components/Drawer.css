@@ -1,5 +1,5 @@
 @layer components {
-  .wi {
+  .sa {
     &-drawer {
       @apply overflow-x-hidden overflow-y-auto w-75 min-w-75;
 

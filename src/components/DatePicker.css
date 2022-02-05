@@ -1,5 +1,5 @@
 @layer components {
-  .wi {
+  .sa {
     &-datepicker-overlay::before {
       content: '';
       @apply fixed inset-0 bg-black hidden opacity-0 transition-opacity ease-out duration-200;
@@ -8,14 +8,14 @@
       @apply block opacity-50;
     }
     &-datepicker::before {
-      --wi-datepicker: 0px;
+      --sa-datepicker: 0px;
       content: '';
       @apply absolute top-0 w-4 h-4 bg-white shadow border border-black border-opacity-10 dark:bg-gray-800 dark:border-gray-700 dark:border-opacity-100;
       transform: translate(50%, -50%) rotate(-45deg);
       clip-path: polygon(
-        calc(var(--wi-datepicker) * -1) calc(var(--wi-datepicker) * -1),
-        calc(100% + var(--wi-datepicker)) calc(var(--wi-datepicker) * -1),
-        calc(100% + var(--wi-datepicker)) calc(100% + var(--wi-datepicker))
+        calc(var(--sa-datepicker) * -1) calc(var(--sa-datepicker) * -1),
+        calc(100% + var(--sa-datepicker)) calc(var(--sa-datepicker) * -1),
+        calc(100% + var(--sa-datepicker)) calc(100% + var(--sa-datepicker))
       );
     }
     &-datepicker.place-left::before {

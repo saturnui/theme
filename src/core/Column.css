@@ -1,5 +1,5 @@
 @layer components {
-  .wi {
+  .sa {
     &-col-3 {
       @apply grid grid-cols-3;
     }

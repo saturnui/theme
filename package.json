@@ -1,11 +1,11 @@
 {
-  "name": "@vuwi/plugin",
+  "name": "@saturnui/theme",
   "version": "0.0.0",
   "files": [
     "dist"
   ],
   "exports": {
-    "./vuwi.css": "./dist/vuwi.css",
+    "./saturn.css": "./dist/saturn.css",
     "./safelist": "./dist/safelist.js",
     "./dist/tailwindcss": "./dist/tailwindcss.js",
     "./tailwindcss": "./dist/tailwindcss.js",
@@ -16,7 +16,7 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "build:local": "rm -f vuwi-plugin-$npm_package_version.tgz && pnpm build && npm pack && mkdir -p ~/local_modules && rm -rf ~/local_modules/vuwi-plugin-$npm_package_version.tgz && cp vuwi-plugin-$npm_package_version.tgz ~/local_modules/vuwi-plugin.tgz"
+    "build:local": "rm -f saturnui-theme-$npm_package_version.tgz && pnpm build && npm pack && mkdir -p ~/local_modules && rm -rf ~/local_modules/saturnui-theme-$npm_package_version.tgz && cp saturnui-theme-$npm_package_version.tgz ~/local_modules/saturnui-theme.tgz"
   },
   "devDependencies": {
     "@types/node": "^17.0.9",

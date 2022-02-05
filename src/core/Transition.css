@@ -1,5 +1,5 @@
 @layer components {
-  .wi {
+  .sa {
     /* &-fade-enter-active {
       transition: opacity 200ms ease-out;
     }
@@ -15,60 +15,60 @@
 
     /* Spin */
     .animate-spin&-fastest {
-      animation: wi-rotate 0.25s linear infinite;
+      animation: sa-rotate 0.25s linear infinite;
     }
 
     .animate-spin&-faster {
-      animation: wi-rotate 0.5s linear infinite;
+      animation: sa-rotate 0.5s linear infinite;
     }
 
     .animate-spin&-fast {
-      animation: wi-rotate 0.75s linear infinite;
+      animation: sa-rotate 0.75s linear infinite;
     }
 
     .animate-spin&-slow {
-      animation: wi-rotate 2s linear infinite;
+      animation: sa-rotate 2s linear infinite;
     }
 
     .animate-spin&-slower {
-      animation: wi-rotate 3s linear infinite;
+      animation: sa-rotate 3s linear infinite;
     }
 
     .animate-spin&-slowest {
-      animation: wi-rotate 4s linear infinite;
+      animation: sa-rotate 4s linear infinite;
     }
 
     /* Stripe Animation */
     &-stripe&-animate-right {
-      animation: wi-animate-right 1s linear infinite;
+      animation: sa-animate-right 1s linear infinite;
     }
 
     &-stripe&-animate-right&-fastest {
-      animation: wi-animate-right 0.25s linear infinite;
+      animation: sa-animate-right 0.25s linear infinite;
     }
 
     &-stripe&-animate-right&-faster {
-      animation: wi-animate-right 0.5s linear infinite;
+      animation: sa-animate-right 0.5s linear infinite;
     }
 
     &-stripe&-animate-right&-fast {
-      animation: wi-animate-right 0.75s linear infinite;
+      animation: sa-animate-right 0.75s linear infinite;
     }
 
     &-stripe&-animate-right&-slow {
-      animation: wi-animate-right 2s linear infinite;
+      animation: sa-animate-right 2s linear infinite;
     }
 
     &-stripe&-animate-right&-slower {
-      animation: wi-animate-right 3s linear infinite;
+      animation: sa-animate-right 3s linear infinite;
     }
 
     &-stripe&-animate-right&-slowest {
-      animation: wi-animate-right 4s linear infinite;
+      animation: sa-animate-right 4s linear infinite;
     }
   }
 
-  @keyframes wi-rotate {
+  @keyframes sa-rotate {
     0% {
       transform: rotate(0deg);
     }
@@ -77,7 +77,7 @@
     }
   }
 
-  @keyframes wi-animate-right {
+  @keyframes sa-animate-right {
     0% {
       background-position: 0 0;
     }
