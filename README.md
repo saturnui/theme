@@ -1,7 +1,7 @@
-Saturn Theme
+Saturn Default Theme
 ---
 
-Default provided by Saturn that can be used with [@saturnui/vue](https://github.com/saturnui/vue) Headless UI components.
+This theme is intended to be used with [@saturnui/vue](https://github.com/saturnui/vue) Headless UI components.
 
 Usage:
 
