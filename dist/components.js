@@ -24,6 +24,7 @@ module.exports = {
     "maxWidth": "3rem",
     "minHeight": "3rem",
     "minWidth": "3rem",
+    "position": "relative",
     "width": "3rem"
   },
   ".sa-avatar>*": {
@@ -44,6 +45,21 @@ module.exports = {
     "height": "100%",
     "width": "100%"
   },
+  ".sa-avatar.sa-status:before,.sa-avatar[status]:before": {
+    "--tw-bg-opacity": "1",
+    "backgroundColor": "rgba(209,213,219,var(--tw-bg-opacity))",
+    "--tw-border-opacity": "1",
+    "borderColor": "rgba(255,255,255,var(--tw-border-opacity))",
+    "borderRadius": "9999px",
+    "borderWidth": "2px",
+    "height": ".9rem",
+    "position": "absolute",
+    "top": "0px",
+    "right": "0px",
+    "width": ".9rem",
+    "zIndex": "10",
+    "content": "\"\""
+  },
   ".sa-avatar.sa-sm,.sa-avatar[size=sm]": {
     "fontWeight": "700",
     "height": "2rem",
@@ -54,6 +70,13 @@ module.exports = {
     "minHeight": "2rem",
     "minWidth": "2rem",
     "width": "2rem"
+  },
+  ".sa-avatar.sa-sm.sa-status:before,.sa-avatar.sa-sm[status]:before,.sa-avatar[size=sm].sa-status:before,.sa-avatar[size=sm][status]:before": {
+    "borderWidth": "1px",
+    "height": ".5rem",
+    "top": ".05rem",
+    "right": ".05rem",
+    "width": ".5rem"
   },
   ".sa-avatar.sa-lg,.sa-avatar[size=lg]": {
     "fontWeight": "500",
@@ -66,6 +89,13 @@ module.exports = {
     "minWidth": "5rem",
     "width": "5rem"
   },
+  ".sa-avatar.sa-lg.sa-status:before,.sa-avatar.sa-lg[status]:before,.sa-avatar[size=lg].sa-status:before,.sa-avatar[size=lg][status]:before": {
+    "borderWidth": "2px",
+    "height": "1rem",
+    "top": ".25rem",
+    "right": ".25rem",
+    "width": "1rem"
+  },
   ".sa-avatar.sa-xl,.sa-avatar[size=xl]": {
     "fontWeight": "300",
     "height": "8rem",
@@ -76,6 +106,29 @@ module.exports = {
     "minHeight": "8rem",
     "minWidth": "8rem",
     "width": "8rem"
+  },
+  ".sa-avatar.sa-xl.sa-status:before,.sa-avatar.sa-xl[status]:before,.sa-avatar[size=xl].sa-status:before,.sa-avatar[size=xl][status]:before": {
+    "borderWidth": "3px",
+    "height": "1.25rem",
+    "top": ".65rem",
+    "right": ".65rem",
+    "width": "1.25rem"
+  },
+  ".sa-avatar.sa-status-danger:before,.sa-avatar[status=danger]:before": {
+    "--tw-bg-opacity": "1 !important",
+    "backgroundColor": "rgba(239,68,68,var(--tw-bg-opacity)) !important"
+  },
+  ".sa-avatar.sa-status-success:before,.sa-avatar[status=success]:before": {
+    "--tw-bg-opacity": "1 !important",
+    "backgroundColor": "rgba(16,185,129,var(--tw-bg-opacity)) !important"
+  },
+  ".sa-avatar.sa-status-info:before,.sa-avatar[status=info]:before": {
+    "--tw-bg-opacity": "1 !important",
+    "backgroundColor": "rgba(14,165,233,var(--tw-bg-opacity)) !important"
+  },
+  ".sa-avatar.sa-status-warning:before,.sa-avatar[status=warning]:before": {
+    "--tw-bg-opacity": "1 !important",
+    "backgroundColor": "rgba(245,158,11,var(--tw-bg-opacity)) !important"
   },
   ".sa-btn": {
     "borderRadius": ".375rem",
@@ -575,6 +628,16 @@ module.exports = {
   ".sa-drawer-responsive-xl,.sa-drawer[responsive=xl]": {
     "maxWidth": "4rem",
     "minWidth": "4rem"
+  },
+  ".sa-dropdown": {
+    "display": "inline-block",
+    "position": "relative"
+  },
+  ".sa-dropdown-enter-active,.sa-dropdown-leave-active": {
+    "transition": "opacity .3s ease"
+  },
+  ".sa-dropdown-enter-from,.sa-dropdown-leave-to": {
+    "opacity": "0"
   },
   ".sa-formsection [name=title]": {
     "fontWeight": "500",
@@ -1805,16 +1868,6 @@ module.exports = {
     "maxWidth": "56rem",
     "width": "100%"
   },
-  ".sa-border": {
-    "--tw-border-opacity": [
-      "1",
-      ".1"
-    ],
-    "borderColor": [
-      "rgba(226,232,240,var(--tw-border-opacity))",
-      "rgba(15,23,42,var(--tw-border-opacity))"
-    ]
-  },
   ".bg-danger": {
     "--tw-bg-opacity": "1",
     "backgroundColor": "rgba(239,68,68,var(--tw-bg-opacity))"
@@ -1942,6 +1995,16 @@ module.exports = {
     "backgroundColor": "rgba(30,41,59,var(--tw-bg-opacity))",
     "--tw-text-opacity": "1",
     "color": "rgba(222,226,230,var(--tw-text-opacity))"
+  },
+  ".sa-border": {
+    "--tw-border-opacity": [
+      "1",
+      ".1"
+    ],
+    "borderColor": [
+      "rgba(226,232,240,var(--tw-border-opacity))",
+      "rgba(15,23,42,var(--tw-border-opacity))"
+    ]
   },
   ".dark .sa-border": {
     "--tw-border-opacity": [

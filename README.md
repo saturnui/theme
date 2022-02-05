@@ -1,16 +1,16 @@
-Vuwi Theme
+Saturn Theme
 ---
 
-Default provided by Vuwi that can be used with [@vuwi/vue](https://github.com/vuwijs/vue) Headless UI components.
+Default provided by Saturn that can be used with [@saturnui/vue](https://github.com/saturnui/vue) Headless UI components.
 
 Usage:
 
 ```
-pnpm i @vuwi/theme
+pnpm i @saturnui/theme
 ```
 
 In your `main.ts` file
 
 ```
-import '@vuwi/theme/dist/vuwi.css'
+import '@saturnui/theme/dist/saturn.css'
 ```
