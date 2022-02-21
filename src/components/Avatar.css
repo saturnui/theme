@@ -1,16 +1,10 @@
 @layer components {
   .sa {
     &-avatar {
-      @apply relative w-12 h-12 min-w-12 min-h-12 max-w-12 max-h-12 text-xl font-bold;
+      @apply relative w-full h-full;
 
       > * {
         @apply w-full h-full flex justify-center items-center;
-      }
-
-      &.sa-status:before,
-      &[status]:before {
-        @apply absolute bg-gray-300 rounded-full z-10 w-3.6 h-3.6 top-0 right-0 border-2 border-white;
-        content: '';
       }
 
       &.sa-sm,
@@ -19,7 +13,19 @@
 
         &.sa-status:before,
         &[status]:before {
-          @apply w-2 h-2 top-0.2 right-0.2 border-1;
+          @apply absolute bg-gray-300 rounded-full w-2 h-2 top-0.2 right-0.2 border-1;
+          content: '';
+        }
+      }
+
+      &.sa-md,
+      &[size='md'] {
+        @apply w-12 h-12 min-w-12 min-h-12 max-w-12 max-h-12 text-xl font-bold;
+
+        &.sa-status:before,
+        &[status]:before {
+          @apply absolute bg-gray-300 rounded-full z-10 w-3.6 h-3.6 top-0 right-0 border-2 border-white;
+          content: '';
         }
       }
 
@@ -29,7 +35,8 @@
 
         &.sa-status:before,
         &[status]:before {
-          @apply w-4 h-4 top-1 right-1 border-2;
+          @apply absolute bg-gray-300 rounded-full w-4 h-4 top-1 right-1 border-2;
+          content: '';
         }
       }
 
@@ -39,7 +46,8 @@
 
         &.sa-status:before,
         &[status]:before {
-          @apply w-5 h-5 top-2.6 right-2.6 border-3;
+          @apply absolute bg-gray-300 rounded-full w-5 h-5 top-2.6 right-2.6 border-3;
+          content: '';
         }
       }
 
