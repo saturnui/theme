@@ -6,7 +6,7 @@
       div[name="tooltip"] {
         @apply absolute flex items-center gap-2 px-3 py-2 
         text-sm bg-black text-white 
-        font-semibold rounded-lg z-1;
+        font-semibold rounded-lg z-50;
       }
 
       div[name='arrow'],
