@@ -1,7 +1,7 @@
 @layer components {
   .sa {
     &-dropdown {
-      @apply relative inline-block;
+      @apply relative inline-block z-10;
 
       &-enter-active,
       &-leave-active {

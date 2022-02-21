@@ -5,3 +5,4 @@ dist-ssr
 .tmp
 .tmp/*
 *.tgz
+*.log

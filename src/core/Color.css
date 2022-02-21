@@ -1,5 +1,9 @@
 @layer components {
   .bg {
+    &-disabled {
+      @apply bg-gray-300;
+    }
+
     &-danger {
       @apply bg-red-500;
     }
@@ -15,6 +19,10 @@
   }
 
   .text {
+    &-disabled {
+      @apply text-dark-600;
+    }
+
     &-danger {
       @apply text-red-500;
     }
@@ -30,6 +38,10 @@
   }
 
   .border {
+    &-disabled {
+      @apply border-gray-300;
+    }
+
     &-danger {
       @apply border-red-500;
     }
@@ -45,6 +57,10 @@
   }
 
   .sa {
+    &-disabled {
+      @apply bg-gray-300 text-dark-600;
+    }
+
     &-danger {
       @apply bg-red-500 text-white;
     }
