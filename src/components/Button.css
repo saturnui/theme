@@ -21,25 +21,25 @@
       &.sa-xs, &[size='xs'] {
         @apply px-2 leading-0 text-xs min-h-5;
         &[icon] {
-          @apply min-w-5;
+          @apply w-5 h-5;
         }
       }
       &.sa-sm, &[size='sm'] {
         @apply px-3 leading-0 text-sm min-h-8;
         &[icon] {
-          @apply min-w-8;
+          @apply w-8 h-8;
         }
       }
       &.sa-lg, &[size='lg'] {
         @apply px-6 min-h-12 text-lg;
         &[icon] {
-          @apply min-w-12;
+          @apply w-12 h-12;
         }
       }
       &.sa-xl, &[size='xl'] {
         @apply px-8 min-h-14 text-xl;
         &[icon] {
-          @apply min-w-14;
+          @apply w-14 h-14;
         }
       }
 
